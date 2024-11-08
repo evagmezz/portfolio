@@ -1,0 +1,384 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body, html {
+    padding-top: 90px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+/* Estilo para el header */
+header {
+    background-color: #658BBB;
+    top: 0;
+    left: 0;
+    color: #C4D7EF;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+/* Estilo para el índice de navegación */
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #436CA0;
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para los proyectos */
+#portfolio .portfolio-item {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#portfolio .portfolio-item a {
+    text-decoration: none;
+    color: #91B0D8;
+    font-size: 18px;
+}
+
+#portfolio .portfolio-item a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para las noticias sobre proyectos*/
+#myProjects #project-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+/* Estilo para la sección de contacto */
+#contact {
+    background-color: #C4D7EF;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#contact h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#contact p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#contact .contact-details p {
+    margin-bottom: 10px;
+}
+
+#contact a {
+    color: #2A558D;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos generales para la galería */
+#gallery {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* Título de la galería */
+#gallery h2 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #2A558D;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Contenedor de la galería (baraja de cartas) */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    position: relative;
+    margin-top: 70px;
+}
+
+/* Estilos para las imágenes en la galería */
+.gallery-item {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #C4D7EF;
+    cursor: pointer;
+    position: absolute;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen del centro (sin rotación) */
+.gallery-item.center {
+    transform: rotate(0deg);
+    z-index: 2;
+}
+
+/* Imagen a la izquierda (rotada) */
+.gallery-item:first-child {
+    transform: rotate(-20deg);
+    z-index: 1;
+}
+
+/* Imagen a la derecha (rotada) */
+.gallery-item:last-child {
+    transform: rotate(20deg);
+    z-index: 1;
+}
+
+/* Efecto de hover en las imágenes (cuando el usuario pase el ratón) */
+.gallery-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.images {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos generales para la galería */
+#gallery {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* Título de la galería */
+#gallery h2 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Contenedor de la galería */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+/* Estilos para las imágenes en la galería */
+.gallery-item {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de hover en las imágenes */
+.gallery-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.images {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Oculta el scroll aquí para usarlo en el contenido */
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-height: 80vh; /* Limita el alto al 80% de la pantalla para permitir el scroll */
+    overflow-y: auto; /* Activa el scroll vertical */
+}
+
+.modal-close {
+    text-align: right;
+    font-size: 30px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.modal-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(700px, 1fr)); /* Tamaño mayor para las imágenes */
+    gap: 20px;
+    justify-content: center;
+}
+
+.modal-images {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+section {
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #658BBB;
+    border: 2px solid #2A558D;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 30px;
+    height: auto;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #2A558D;
+}
+
+fieldset {
+    border: 1px solid #2A558D;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #C4D7EF;
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+button {
+    background-color: #2A558D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #658BBB;
+}
+
+
+

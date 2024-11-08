@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Mi Portafolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+<header>
+    <h1>Contacto</h1>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="gallery.html">Galería</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="contacto.html" style="color: #2A558D">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="contact">
+    <h2 style="color: #2A558D">Ubicación y Contacto</h2>
+    <div id="map" style="height: 400px;"></div>
+    <p style="color: #2A558D"> AV, Leganés, 6 Local 3, Alcorcón, Madrid</p>
+    <p style="color: #2A558D">Teléfono: +34 123 456 789</p>
+    <p style="color: #2A558D">Email: contacto@masterd.com</p>
+</section>
+
+<script>
+    // Inicializar el mapa
+    var map = L.map('map').setView([40.349899, -3.823231], 13);
+
+    // Añadir capa de OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Añadir marcador para la ubicación de la empresa
+    L.marker([40.349899, -3.823231]).addTo(map)
+        .bindPopup('MasterD<br> AV, Leganés, 6 Local 3, Alcorcón, Madrid')
+        .openPopup();
+</script>
+
+<footer>
+    <div class="social-media">
+        <a href="https://github.com/evagmezz" target="_blank"><img src="../img/github.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/eva-gomez-2811392a1/" target="_blank"><img src="../img/linkedin.png" alt="LinkedIn"></a>
+    </div>
+    <p style="color: #C4D7EF;">&copy; 2024 Portafolio Eva Gómez. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

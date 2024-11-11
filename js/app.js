@@ -59,7 +59,8 @@ $(document).ready(function () {
     const totalInput = document.getElementById('total');
     const privacyCheckbox = document.getElementById('privacy');
 
-    // Función para validar los datos de contacto
+
+// Función para validar los datos de contacto
     function validateContactData() {
         let valid = true;
         // Validamos el nombre

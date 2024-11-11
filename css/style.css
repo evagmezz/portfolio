@@ -380,5 +380,14 @@ button:hover {
     background-color: #658BBB;
 }
 
+.dark {
+    color: #2A558D;
+}
 
+.derechos {
+    color: #C4D7EF;
+}
 
+#map {
+    height: 400px;
+}

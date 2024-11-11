@@ -105,7 +105,6 @@ $(document).ready(function () {
 
         return valid;
     }
-
     // Función para calcular el total del presupuesto
     function calculateTotal() {
         const productPrice = parseFloat(productSelect.value);

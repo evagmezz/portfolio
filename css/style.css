@@ -252,7 +252,7 @@ section h2 {
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Oculta el scroll aquí para usarlo en el contenido */
+    overflow: hidden;
     z-index: 1000;
 }
 
@@ -261,8 +261,8 @@ section h2 {
     padding: 20px;
     border-radius: 10px;
     width: 90%;
-    max-height: 80vh; /* Limita el alto al 80% de la pantalla para permitir el scroll */
-    overflow-y: auto; /* Activa el scroll vertical */
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .modal-close {
@@ -274,7 +274,7 @@ section h2 {
 
 .modal-gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(700px, 1fr)); /* Tamaño mayor para las imágenes */
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
     gap: 20px;
     justify-content: center;
 }
